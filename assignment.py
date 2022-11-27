@@ -64,22 +64,47 @@ personal_details()
 Rad = float(input("Enter radius of circle:"))
 formula = (22/7)*Rad**2
 print("The area of circle is:",formula)
+
+#Q.no.11
+Sal = float(input("Enter your salary:"))
+if Sal<20000:
+    tax = (15/100)*Sal
+    netsal = Sal - tax
+    print("Your salary after deducting tax is:",netsal)
+elif Sal>20000 and Sal <= 50000:
+    tax = (25/100)*Sal
+    netsal = Sal -tax
+    print("Your salary after deducting tax is:",netsal)
+elif Sal>50000 and Sal<=100000:
+    tax = (30/100)*Sal
+    netsal = Sal - tax
+    print("Your salary after deducting tax is:",netsal)
+elif Sal>100000:
+    tax = (30/100)*Sal
+    netsal = Sal - tax
+    print("Your salary after deducting tax is:",netsal)
+else :
+    print("Invalid Salary")
+
 #Q.no.12
 
 a=int(input("Enter your number:"))
 b=int(input("Enter your number:"))
 c=int(input("Enter your number:"))
-if a>c and c>b:
-    print("The smallest number is:",b)
-elif a>b and b>c:
-    print("The smallest number is:",c)
-elif c>b and b>a:
+if a<c and a<b:
     print("The smallest number is:",a)
+elif b<a and b>c:
+    print("The smallest number is:",b)
+elif c<b and c>a:
+    print("The smallest number is:",c)
 else:
     print("Invalid  number")
+#q.no.13
+
 #q.no.14
 List = [1,2,3,4,5]
 print (5 in List)
+#
 #Q.no.15
 Num = int(input("Enter number from 1 to 12:"))
 if Num == 1:
@@ -114,8 +139,23 @@ print (x)
 x+=3
 print(x)
 #Q.no.17
+mark = float(input('Enter your mark:'))
+if mark < 25:
+    print("Your grade is,F")
+elif mark >= 25 and mark < 45 :
+    print ("Your grade is, E")
+elif mark >= 45 and mark < 50 :
+    print ("Your grade is, D")
+elif mark >= 50 and mark < 60 :
+    print ("Your grade is, C")
+elif mark >= 60 and mark < 80 :
+    print ("Your grade is, B")
+elif mark > 80 and mark <=100:
+    print("Your grade is, A")
+else:
+    print("invalid marks")
 
- #Q.NO.18
+#Q.NO.18
 Ram = int(input("Enter your age:"))
 Shyam = int(input("Enter your age:"))
 Gita = int(input("Enter your age:"))
@@ -292,13 +332,33 @@ else :
     print("Enter appropriate age")
   
 
+a = int(input('Enter your age:'))
+b = input('Enter your sex(M/F):')
+c = int(input('Enter number of days:'))
+if a >=18 and a<30:
+    if b == 'M':
+        wage = 500*c
+        print('your wage is:',wage)
+    else:
+        wage = 550*c
+        print('Your wage is:',wage)
+elif a>=30 and a<=40:
+    if b == 'M':
+        wage = 600*c
+        print('your wage is:',wage)
+    else:
+        wage = 650*c
+        print ('your wage is:',wage)
+else :
+    print('invalid age')
+       
 #Q.no.35
 Num1 = int(input("Enter your number:"))
 Num2 = int(input("Enter your number:"))
 Num3 = int(input("Enter your number:"))
-if Num1 > Num2 and Num2 > Num3:
-    print("Number is the second largest number")
-elif Num1 > Num3 and Num3 > Num2:
+if (Num1 > Num2 and Num1 < Num3) or(Num1<Num2 and Num1>Num3):
+    print("Number1 is the second largest number")
+elif (Num2 > Num3 and Num2 > Num1) or (Num):
     print("Number2 is the second largesst number")
 elif Num3 > Num1 and Num1 > Num2:
     print("Number is the second largest number")
