@@ -101,4 +101,55 @@ c={1,2,3,4,5}
 print(type(a))
 print(type(b))
 print(type(c)) """
+#append
+a = [1,2,3,4,5]
+a.append([6,9])  #esma chai list nai gayera basxa
+print(a)
+#extend
+a = [1,2,3,4,5]
+a.extend([6,9])  #esma chai single element gayera basxa
+print(a)
+#insert
+a= [1,2,3,4,5,6,]
+a[0]='hi'
+print(a)     #esma chai jata halna mann lagyo tesma halna milxa
+
+#del=indexing gareko element delete hunxa 
+a=[1,2,3,4,5]  
+del a[2]
+print (a)
+#remove=jun number remove garnu xa tei remove hunxa indexing hudaina
+a=[1,2,3,4]
+a.remove(3)
+print(a)
+#pop=khali xodyo bhane last element delete hunxa   
+a=[1,2,3,4]
+a.pop(2)
+print (a)
+
+#sort = ascending order ma haldinxa
+a=[1,6,8,4,5,8,9]  
+a.sort()
+print(a)
+
+#REVERSE = list ko reverse nikalxa
+a=[1,3,45,67,89,90]
+a.reverse()
+print(a)
+
+#tuple
+a=(1,2,3,4,5)  #tuple lai list ma convert gareko ani list ma add gareko
+tp = list((a))
+tp.extend([6])
+print(tp)
+
+
+a=(1,2,3,4,1,1,1,1)
+b = len(a)
+count=[]
+for i in range(b):
+    if a[i]==1:
+        count.append(i)
+print(count)
+
 
